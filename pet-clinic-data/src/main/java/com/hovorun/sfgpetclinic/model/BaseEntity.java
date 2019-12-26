@@ -1,5 +1,7 @@
 package com.hovorun.sfgpetclinic.model;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import java.io.Serializable;
 
 public class BaseEntity implements Serializable {
