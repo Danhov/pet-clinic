@@ -1,20 +1,22 @@
 package com.hovorun.sfgpetclinic.services.map;
 
-import com.hovorun.sfgpetclinic.model.Vet;
+import com.hovorun.sfgpetclinic.model.Pet;
 import com.hovorun.sfgpetclinic.services.CrudService;
-import com.hovorun.sfgpetclinic.services.VetService;
+import com.hovorun.sfgpetclinic.services.PetService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 @Service
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
+@Profile({"default", "map"})
+public class PetMapService extends AbstractMapService<Pet, Long> implements PetService {
     @Override
-    public Set <Vet> findAll() {
+    public Set <Pet> findAll() {
         return super.findAll();
     }
 
     @Override
-    public void delete(Vet object) {
+    public void delete(Pet object) {
         super.delete(object);
     }
 
@@ -24,12 +26,12 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
     }
 
     @Override
-    public Vet save(Vet object) {
+    public Pet save(Pet object) {
         return super.save(object);
     }
 
     @Override
-    public Vet findById(Long id) {
+    public Pet findById(Long id) {
         return super.findById(id);
     }
 }
